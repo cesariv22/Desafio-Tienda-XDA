@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Old Standard TT", serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.xda-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.xda-nav__logo--xda {
+  background-color: #0C0910;
+  color: #FFF;
+  font-family: "Old Standard TT", serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0.75rem;
+}
+.xda-nav__menu--xda {
+  display: none;
+}
+.xda-nav__menu--xda:checked ~ .xda-nav__list {
+  display: block;
+  left: 0;
+}
+.xda-nav__menu--xda:checked ~ .xda-nav__menu--icon {
+  background-color: #FFF;
+  color: #0C0910;
+}
+.xda-nav__menu--icon {
+  display: inline-block;
+  user-select: none;
+  font-size: 23px;
+  margin: 0.75rem 2rem;
+}
+.xda-nav__menu--icon:hover {
+  background-color: #FFF;
+  color: #0C0910;
+}
+.xda-nav__list {
+  display: none;
+}
+.xda-nav__list--ulist {
+  display: block;
+}
+.xda-nav__list--ulist:focus {
+  color: #A6A5A8;
+}
+.xda-nav__list--ulist__list--ulist,
+.xda-nav__list--ulist a {
+  color: #0C0910;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .xda-nav__menu--icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .xda-nav__list {
+    display: inline-block;
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .xda-nav__list--ulist {
+    display: inline-block;
+    padding: 1.85rem 1.25rem;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .xda-nav__logo--xda {
+    padding: 1.25em 1.75rem;
+    font-size: 18px;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .xda-nav__logo--xda {
+    padding: 2rem 3rem;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .xda-nav__list {
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .xda-nav__list--ulist {
+    padding: 3.3rem 1rem;
+    font-size: 20px;
+  }
+}
+.header-image {
+  background-image: url(../img/imagen1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 225px;
+  width: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header-image {
+    background-size: cover;
+    background-position: 100% 25%;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    position: relative;
+    left: 45%;
+    bottom: 0;
+    top: 0;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-image {
+    height: 700px;
+  }
+}
+.description-page__title {
+  font-family: "Old Standard TT", serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 30px 33px 0;
+}
+.description-page__paragraph {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #A6A5A8;
+  padding: 5px 33px 0;
+  line-height: 25px;
+}
+.description-page__paragraph--2 {
+  display: none;
+}
+.description-page__button {
+  margin: 10px 33px 0;
+  border: 1px solid #646266;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  padding: 5px 5px;
+  background-color: #FFF;
+}
+.description-page__button:hover {
+  border: 1px solid #ECECEC;
+}
+.description-page__button:focus {
+  border: 1px solid #A6A5A8;
+}
+.description-page__link {
+  text-decoration: none;
+  color: #0C0910;
+}
+.description-page__link:focus {
+  color: #A6A5A8;
+}
+
+@media screen and (min-width: 768px) {
+  .description-page {
+    margin-left: 80px;
+  }
+  .description-page__title {
+    margin-right: 300px;
+    padding: 10px 0;
+  }
+  .description-page__paragraph {
+    display: none;
+  }
+  .description-page__paragraph--2 {
+    display: inline-block;
+    padding-right: 225px;
+    font-size: 15px;
+    color: #A6A5A8;
+  }
+  .description-page__button {
+    margin: 20px 0 0;
+    padding: 8px 5px;
+  }
+  .description-page__link {
+    padding: 15px 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .description-page {
+    position: absolute;
+    width: 45%;
+    top: 0;
+    margin: 0;
+    padding: 50px 10px 0 80px;
+  }
+  .description-page__title {
+    font-size: 50px;
+    margin: 0;
+  }
+  .description-page__paragraph--2 {
+    font-size: 18px;
+    padding-right: 90px;
+    color: #A6A5A8;
+  }
+  .description-page__button {
+    margin-top: 30px;
+    padding: 12px 16px;
+    font-style: 18px;
+  }
+  .description-page__link {
+    font-size: 20px;
+  }
+}
+.xda-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.xda-footer__section {
+  background-color: #0C0910;
+  color: #FFF;
+  font-family: "Old Standard TT", serif;
+  padding: 0 33px;
+  width: 90%;
+}
+.xda-footer__section--title {
+  padding-top: 20px;
+}
+.xda-footer__section--email {
+  padding-top: 5px;
+}
+.xda-footer__section--input {
+  margin: 5px 0 20px;
+  padding: 5px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+.xda-footer__buttom--subscribe,
+.xda-footer a {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  text-decoration: none;
+  padding-right: 10px;
+  color: #0C0910;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .xda-footer {
+    margin-top: 50px;
+  }
+  .xda-footer__section {
+    padding: 15px 80px;
+  }
+  .xda-footer__section--input {
+    margin-bottom: 40px;
+  }
+  .xda-footer__buttom {
+    margin-right: 30px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .xda-footer {
+    position: absolute;
+    bottom: 0;
+    margin-top: 0;
+    width: 45%;
+  }
+  .xda-footer__section {
+    padding: 15px 80px 0 80px;
+  }
+  .xda-footer__section--title {
+    font-size: 30px;
+  }
+  .xda-footer__section--email {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .xda-footer__section--input {
+    margin-bottom: 80px;
+    font-size: 15px;
+  }
+  .xda-footer__buttom {
+    margin-right: 0;
+  }
+  .xda-footer__buttom--subscribe {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .xda-section {
+    position: relative;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

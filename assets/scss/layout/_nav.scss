@@ -1,0 +1,114 @@
+.xda-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo--xda {
+        background-color: $color-smoky-black;
+        color: $color-white;
+        font-family: $ff-old-std;
+        font-size: $fs-x-large;
+        font-weight: $fw-bold;
+        text-align: center;
+        padding: 1rem 0.75rem;
+    }
+
+    &__menu--xda {
+        display: none;
+
+        &:checked~.xda-nav__list {
+            display: block;
+            left: 0;
+        }
+
+        &:checked~.xda-nav__menu--icon {
+            background-color: $color-white;
+            color: $color-smoky-black;
+        }
+    }
+
+    &__menu--icon {
+        display: inline-block;
+        user-select: none;
+        font-size: 23px;
+        margin: 0.75rem 2rem;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-smoky-black;
+        }
+    }
+
+    &__list {
+        display: none;
+    }
+
+    &__list--ulist {
+        display: block;
+
+        &:focus {
+            color: $color-quick-silver;
+        }
+
+        &__list--ulist,
+        a {
+            color: $color-smoky-black;
+            text-decoration: none;
+        }
+    }
+}
+
+@include tablet-view {
+    .xda-nav__menu--icon {
+        display: none;
+    }
+}
+
+@include tablet-view {
+    .xda-nav__list {
+        display: inline-block;
+        margin-right: 100px;
+    }
+}
+
+@include tablet-view {
+    .xda-nav__list--ulist {
+        display: inline-block;
+        padding: 1.85rem 1.25rem;
+        font-size: $fs-small;
+    }
+}
+
+@include tablet-view {
+    .xda-nav__logo--xda {
+        padding: 1.25em 1.75rem;
+        font-size: $fs-large;
+        writing-mode: vertical-lr;
+        -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+}
+@include desktop-view {
+    .xda-nav__logo--xda {
+        padding: 2rem 3rem;
+        font-size: $fs-xx-large;
+    }
+}
+@include desktop-view {
+    .xda-nav__list {
+        margin-right: 50px;
+    }
+}
+@include desktop-view {
+    .xda-nav__list--ulist {
+        padding: 3.3rem 1rem;
+        font-size: $fs-x-large;
+    }
+}
+
+
+

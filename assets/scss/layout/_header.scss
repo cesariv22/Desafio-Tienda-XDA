@@ -1,0 +1,29 @@
+.header-image {
+    background-image: url(../img/imagen1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 225px;
+    width: auto;
+}
+
+@include tablet-view {
+    .header-image {
+        background-size: cover;
+        background-position: 100% 25%;
+        height: 300px;
+        }
+}
+@include desktop-view {
+    .header{
+        position: relative;
+        left: 45%;
+        bottom: 0;
+        top: 0;
+        width: 55%;
+    }
+}
+@include desktop-view {
+    .header-image {
+        height: 700px;
+    }
+}

@@ -1,0 +1,110 @@
+.description-page {
+
+    &__title {
+        font-family: $ff-old-std;
+        font-size: $fs-xx-large;
+        text-transform: uppercase;
+        padding: 30px 33px 0;
+    }
+
+    &__paragraph {
+        font-family: $ff-raleway;
+        font-weight: $fw-regular;
+        font-size: $fs-small;
+        color: $color-quick-silver;
+        padding: 5px 33px 0;
+        line-height: $lh-medium;
+    }
+
+    &__paragraph--2 {
+        display: none;
+    }
+
+    &__button {
+        margin: 10px 33px 0;
+        border: 1px solid $color-granite-gray;
+        font-family: $ff-raleway;
+        font-size: $fs-medium;
+        padding: 5px 5px;
+        background-color: $color-white;
+
+        &:hover {
+            border: 1px solid $color-isabelline;
+        }
+
+        &:focus {
+            border: 1px solid $color-quick-silver;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-smoky-black;
+
+        &:focus {
+            color: $color-quick-silver;
+        }
+    }
+}
+
+@include tablet-view {
+    .description-page {
+        margin-left: 80px;
+
+        &__title {
+            margin-right: 300px;
+            padding: 10px 0;
+        }
+
+        &__paragraph {
+            display: none;
+        }
+
+        &__paragraph--2 {
+            display: inline-block;
+            padding-right: 225px;
+            font-size: $fs-medium;
+            color: $color-quick-silver;
+        }
+
+        &__button {
+            margin: 20px 0 0;
+            padding: 8px 5px;
+        }
+
+        &__link {
+            padding: 15px 15px;
+        }
+    }
+}
+
+@include desktop-view {
+    .description-page {
+        position: absolute;
+        width: 45%;
+        top: 0;
+        margin: 0;
+        padding: 50px 10px 0 80px;
+
+        &__title {
+            font-size: $fs-xxx-large;
+            margin: 0;
+        }
+
+        &__paragraph--2 {
+            font-size: $fs-large;
+            padding-right: 90px;
+            color: $color-quick-silver;
+        }
+
+        &__button {
+            margin-top: 30px;
+            padding: 12px 16px;
+            font-style: $fs-large;
+        }
+
+        &__link {
+            font-size: $fs-x-large;
+        }
+    }
+}
